@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { ServicesContent } from "@/components/pages/ServicesContent";
+import { LazyServicesContent } from "@/components/pages/LazyServicesContent";
 import { JsonLd, buildServiceSchema, buildFaqSchema } from "@/components/seo/JsonLd";
 import type { Metadata } from "next";
 
@@ -39,7 +39,7 @@ export default async function ServicesPage({
     <>
       <JsonLd data={buildServiceSchema(locale)} />
       <JsonLd data={buildFaqSchema(faqItems)} />
-      <ServicesContent />
+      <LazyServicesContent />
     </>
   );
 }
