@@ -100,7 +100,7 @@ export function HomeContent() {
                 <div className="flex flex-col gap-4 sm:flex-row">
                   <MagneticButton
                     href="/contact"
-                    className="inline-flex items-center justify-center rounded-xl bg-orange-500 px-8 py-4 text-lg font-medium text-white transition-all hover:bg-orange-600 hover:shadow-xl hover:shadow-orange-500/25"
+                    className="inline-flex items-center justify-center rounded-xl bg-orange-600 px-8 py-4 text-lg font-medium text-white transition-all hover:bg-orange-700 hover:shadow-xl hover:shadow-orange-600/25"
                     strength={0.35}
                   >
                     {t("hero.cta")}
@@ -207,7 +207,7 @@ export function HomeContent() {
             </h2>
             <MagneticButton
               href="/contact"
-              className="inline-flex items-center justify-center mt-4 rounded-xl bg-orange-500 px-8 py-4 text-lg font-medium text-white transition-all hover:bg-orange-600 hover:shadow-xl hover:shadow-orange-500/25"
+              className="inline-flex items-center justify-center mt-4 rounded-xl bg-orange-600 px-8 py-4 text-lg font-medium text-white transition-all hover:bg-orange-700 hover:shadow-xl hover:shadow-orange-600/25"
               strength={0.3}
             >
               {t("banner.cta")}
@@ -279,7 +279,7 @@ export function HomeContent() {
           <AnimatedSection delay={0.5}>
             <MagneticButton
               href="/contact"
-              className="inline-flex items-center justify-center rounded-xl bg-orange-500 px-10 py-5 text-lg font-medium text-white transition-all hover:bg-orange-600 hover:shadow-xl hover:shadow-orange-500/25"
+              className="inline-flex items-center justify-center rounded-xl bg-orange-600 px-10 py-5 text-lg font-medium text-white transition-all hover:bg-orange-700 hover:shadow-xl hover:shadow-orange-600/25"
               strength={0.4}
             >
               {t("cta_final.button")}
