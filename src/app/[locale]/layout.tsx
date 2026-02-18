@@ -83,6 +83,9 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className={`${manrope.variable} ${sourceSans.variable}`}>
+      <head>
+        <meta name="description" content={locale === 'fr' ? 'Firme de gestion de projet spécialisée en consultation PMO, gestion de portefeuille et transformation Agile. Livraisons à temps, dans le budget.' : 'Project management firm specializing in PMO consulting, portfolio management and Agile transformation. On time. On budget.'} />
+      </head>
       <body className="font-body bg-slate-100 text-charcoal antialiased">
         <a
           href="#main-content"

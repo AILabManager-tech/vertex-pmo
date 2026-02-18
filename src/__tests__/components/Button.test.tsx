@@ -28,7 +28,7 @@ describe("Button", () => {
   it("applies secondary variant classes", () => {
     render(<Button variant="secondary">Secondary</Button>);
     const btn = screen.getByRole("button", { name: "Secondary" });
-    expect(btn.className).toContain("bg-orange-600");
+    expect(btn.className).toContain("bg-orange-700");
   });
 
   it("applies outline variant classes", () => {
