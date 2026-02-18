@@ -224,10 +224,10 @@ export function ProjectMaturityAssessment() {
               >
                 {/* Progress */}
                 <div className="flex items-center justify-between mb-6">
-                  <span className="text-xs font-bold text-cobalt-400 uppercase tracking-widest">
+                  <span className="text-xs font-bold text-cobalt-600 uppercase tracking-widest">
                     {t(`axes.${questions[step]?.axis}`)}
                   </span>
-                  <span className="text-sm text-slate-500">
+                  <span className="text-sm text-slate-600">
                     {step + 1} / {questions.length}
                   </span>
                 </div>
@@ -251,7 +251,7 @@ export function ProjectMaturityAssessment() {
                       className="w-full text-left px-5 py-3 rounded-xl border border-slate-200 bg-white hover:border-cobalt-300 hover:bg-cobalt-50 transition-all text-sm text-charcoal group"
                     >
                       <span className="inline-flex items-center gap-3">
-                        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-slate-100 text-xs font-bold text-slate-500 group-hover:bg-cobalt-500 group-hover:text-white transition-colors">
+                        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-slate-100 text-xs font-bold text-slate-700 group-hover:bg-cobalt-500 group-hover:text-white transition-colors">
                           {value}
                         </span>
                         {t(`${questions[step]?.key}.a${value}`)}
@@ -263,7 +263,7 @@ export function ProjectMaturityAssessment() {
                 {step > 0 && (
                   <button
                     onClick={() => setStep(step - 1)}
-                    className="mt-4 flex items-center gap-1 text-sm text-slate-500 hover:text-cobalt-500 transition-colors"
+                    className="mt-4 flex items-center gap-1 text-sm text-slate-600 hover:text-cobalt-500 transition-colors"
                   >
                     <ChevronLeft className="h-4 w-4" />
                     {t("back")}

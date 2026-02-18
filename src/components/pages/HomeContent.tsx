@@ -1,19 +1,56 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { TextReveal } from "@/components/animations/TextReveal";
 import { MagneticButton } from "@/components/animations/MagneticButton";
-import { AuroraBackground } from "@/components/animations/AuroraBackground";
 import { LineReveal } from "@/components/animations/LineReveal";
 
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { StaggerGrid } from "@/components/animations/StaggerGrid";
-import { GanttHero } from "@/components/interactive/GanttHero";
-import { MetricsDashboard } from "@/components/interactive/MetricsDashboard";
-import { MethodologyTimeline } from "@/components/interactive/MethodologyTimeline";
-import { ProjectMaturityAssessment } from "@/components/interactive/ProjectMaturityAssessment";
 import { Target, BarChart3, Users, TrendingUp } from "lucide-react";
+
+/* ── Dynamic imports for heavy below-fold components ── */
+const AuroraBackground = dynamic(
+  () =>
+    import("@/components/animations/AuroraBackground").then((m) => ({
+      default: m.AuroraBackground,
+    })),
+  { ssr: false, loading: () => null }
+);
+
+const GanttHero = dynamic(
+  () =>
+    import("@/components/interactive/GanttHero").then((m) => ({
+      default: m.GanttHero,
+    })),
+  { ssr: false, loading: () => <div className="w-full max-w-lg h-60" /> }
+);
+
+const MetricsDashboard = dynamic(
+  () =>
+    import("@/components/interactive/MetricsDashboard").then((m) => ({
+      default: m.MetricsDashboard,
+    })),
+  { ssr: false, loading: () => <div className="h-32" /> }
+);
+
+const MethodologyTimeline = dynamic(
+  () =>
+    import("@/components/interactive/MethodologyTimeline").then((m) => ({
+      default: m.MethodologyTimeline,
+    })),
+  { ssr: false, loading: () => <div className="h-96" /> }
+);
+
+const ProjectMaturityAssessment = dynamic(
+  () =>
+    import("@/components/interactive/ProjectMaturityAssessment").then((m) => ({
+      default: m.ProjectMaturityAssessment,
+    })),
+  { ssr: false, loading: () => <div className="h-96" /> }
+);
 
 const painIcons = [
   <Target key="scope" className="h-8 w-8" />,
@@ -30,7 +67,7 @@ export function HomeContent() {
       <section className="relative flex min-h-screen items-center overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&q=80&auto=format"
-          alt="Équipe de gestion de projet en réunion stratégique"
+          alt="Equipe de gestion de projet en reunion strategique"
           fill
           priority
           className="object-cover"
@@ -127,10 +164,11 @@ export function HomeContent() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80&auto=format"
-                  alt="Tableau de bord de gestion de projet avec métriques"
+                  alt="Tableau de bord de gestion de projet avec metriques"
                   width={800}
                   height={600}
                   className="object-cover w-full h-[400px]"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-charcoal-dark/60 via-transparent to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6">
@@ -154,10 +192,11 @@ export function HomeContent() {
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=1920&q=80&auto=format"
-          alt="Équipe de projet célébrant une livraison réussie"
+          alt="Equipe de projet celebrant une livraison reussie"
           fill
           className="object-cover"
           sizes="100vw"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-charcoal-dark/50 backdrop-blur-[2px]" />
         <div className="relative z-10 text-center px-6">
@@ -192,20 +231,20 @@ export function HomeContent() {
               <div key={key} className="card-elevated">
                 <div className="flex items-center gap-2 mb-4">
                   <TrendingUp className="h-5 w-5 text-success-500" />
-                  <span className="text-sm font-bold text-success-600">
+                  <span className="text-sm font-bold text-success-700">
                     {t(`testimonials.${key}.metric`)}
                   </span>
                 </div>
-                <p className="text-xs font-medium text-cobalt-400 uppercase tracking-wider mb-3">
+                <p className="text-xs font-medium text-cobalt-600 uppercase tracking-wider mb-3">
                   {t(`testimonials.${key}.industry`)}
                 </p>
                 <div className="space-y-3">
                   <div className="rounded-lg bg-slate-50 p-3">
-                    <p className="text-xs font-semibold text-slate-500 mb-1">{t(`testimonials.${key}.before_title`)}</p>
-                    <p className="text-sm text-slate-600">{t(`testimonials.${key}.before`)}</p>
+                    <p className="text-xs font-semibold text-slate-600 mb-1">{t(`testimonials.${key}.before_title`)}</p>
+                    <p className="text-sm text-slate-700">{t(`testimonials.${key}.before`)}</p>
                   </div>
                   <div className="rounded-lg bg-cobalt-50 p-3">
-                    <p className="text-xs font-semibold text-cobalt-500 mb-1">{t(`testimonials.${key}.after_title`)}</p>
+                    <p className="text-xs font-semibold text-cobalt-700 mb-1">{t(`testimonials.${key}.after_title`)}</p>
                     <p className="text-sm text-charcoal">{t(`testimonials.${key}.after`)}</p>
                   </div>
                 </div>
@@ -219,10 +258,11 @@ export function HomeContent() {
       <section id="contact" className="relative overflow-hidden min-h-[60vh] flex items-center">
         <Image
           src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&q=80&auto=format"
-          alt="Équipe de projet collaborant autour d'un plan"
+          alt="Equipe de projet collaborant autour d'un plan"
           fill
           className="object-cover"
           sizes="100vw"
+          loading="lazy"
         />
         <div className="absolute inset-0 hero-image-overlay" />
         <div className="absolute inset-0 grid-overlay opacity-20" />

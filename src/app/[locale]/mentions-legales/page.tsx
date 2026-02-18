@@ -33,7 +33,7 @@ export default function LegalNoticePage() {
         {isFr ? "Mentions légales" : "Legal Notice"}
       </h1>
 
-      <div className="prose prose-charcoal max-w-none space-y-8 text-charcoal/80">
+      <div className="prose prose-charcoal max-w-none space-y-8 text-charcoal-light">
         <section>
           <h2 className="font-heading text-xl font-semibold text-charcoal">
             {isFr ? "1. Identification de l'entreprise" : "1. Company identification"}

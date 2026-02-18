@@ -32,11 +32,11 @@ export default function PrivacyPolicyPage() {
       <h1 className="mb-8 font-heading text-3xl font-bold text-charcoal">
         {isFr ? "Politique de confidentialité" : "Privacy Policy"}
       </h1>
-      <p className="mb-8 text-sm text-charcoal/70">
+      <p className="mb-8 text-sm text-charcoal-light">
         {isFr ? "Dernière mise à jour : février 2026" : "Last updated: February 2026"}
       </p>
 
-      <div className="prose prose-charcoal max-w-none space-y-8 text-charcoal/80">
+      <div className="prose prose-charcoal max-w-none space-y-8 text-charcoal-light">
         {/* 1. Introduction */}
         <section>
           <h2 className="font-heading text-xl font-semibold text-charcoal">
