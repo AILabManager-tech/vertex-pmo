@@ -145,7 +145,7 @@ export function AboutContent() {
   return (
     <main>
       {/* ── Hero ─────────────────────────────────────────────────── */}
-      <section className="relative min-h-[55vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[55vh] flex items-center overflow-hidden bg-slate-900">
         <Image
           src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&q=80&auto=format"
           alt="Rencontre stratégique d'une équipe de gestion de projet"

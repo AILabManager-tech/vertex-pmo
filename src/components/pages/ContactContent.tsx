@@ -39,7 +39,7 @@ export function ContactContent() {
   return (
     <main>
       {/* Hero */}
-      <section className="relative min-h-[40vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[40vh] flex items-center overflow-hidden bg-slate-900">
         <Image
           src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1920&q=80&auto=format"
           alt="Salle de réunion moderne pour consultation en gestion de projet"

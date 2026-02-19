@@ -64,7 +64,7 @@ export function HomeContent() {
   return (
     <main>
       {/* Hero — full screen with Gantt chart */}
-      <section className="relative flex min-h-screen items-center overflow-hidden">
+      <section className="relative flex min-h-screen items-center overflow-hidden bg-slate-900">
         <Image
           src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&q=80&auto=format"
           alt="Equipe de gestion de projet en reunion strategique"
@@ -189,7 +189,7 @@ export function HomeContent() {
       <ProjectMaturityAssessment />
 
       {/* Image banner */}
-      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-slate-900">
         <Image
           src="https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=1920&q=80&auto=format"
           alt="Equipe de projet celebrant une livraison reussie"
@@ -255,7 +255,7 @@ export function HomeContent() {
       </section>
 
       {/* Final CTA */}
-      <section id="contact" className="relative overflow-hidden min-h-[60vh] flex items-center">
+      <section id="contact" className="relative overflow-hidden min-h-[60vh] flex items-center bg-slate-900">
         <Image
           src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&q=80&auto=format"
           alt="Equipe de projet collaborant autour d'un plan"
