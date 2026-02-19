@@ -141,7 +141,7 @@ export function ContactContent() {
                     required
                     className="mt-1 h-4 w-4 rounded border-slate-300 text-cobalt-500 focus:ring-cobalt-500/20"
                   />
-                  <span className="text-sm text-slate-600">
+                  <span className="text-sm text-slate-700">
                     {t("form.consent_notice")}
                   </span>
                 </label>
@@ -160,7 +160,7 @@ export function ContactContent() {
                   )}
                 </Button>
 
-                <p className="text-sm text-slate-600">{t("form.response_time")}</p>
+                <p className="text-sm text-slate-700">{t("form.response_time")}</p>
               </form>
             </AnimatedSection>
 

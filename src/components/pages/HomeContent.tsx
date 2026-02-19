@@ -153,7 +153,7 @@ export function HomeContent() {
                       <h3 className="text-lg mb-1 text-cobalt-700 transition-colors group-hover:text-orange-500">
                         {t(`pain.${key}.title`)}
                       </h3>
-                      <p className="text-slate-600 text-sm leading-relaxed">{t(`pain.${key}.description`)}</p>
+                      <p className="text-slate-700 text-sm leading-relaxed">{t(`pain.${key}.description`)}</p>
                     </div>
                   </div>
                 </div>
@@ -240,7 +240,7 @@ export function HomeContent() {
                 </p>
                 <div className="space-y-3">
                   <div className="rounded-lg bg-slate-50 p-3">
-                    <p className="text-xs font-semibold text-slate-600 mb-1">{t(`testimonials.${key}.before_title`)}</p>
+                    <p className="text-xs font-semibold text-slate-700 mb-1">{t(`testimonials.${key}.before_title`)}</p>
                     <p className="text-sm text-slate-700">{t(`testimonials.${key}.before`)}</p>
                   </div>
                   <div className="rounded-lg bg-cobalt-50 p-3">

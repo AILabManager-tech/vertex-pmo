@@ -203,7 +203,7 @@ export function ProjectMaturityAssessment() {
         </AnimatedSection>
         <LineReveal className="mx-auto mb-4 w-24" delay={0.3} />
         <AnimatedSection delay={0.2}>
-          <p className="text-center text-slate-600 mb-10">{t("subtitle")}</p>
+          <p className="text-center text-slate-700 mb-10">{t("subtitle")}</p>
         </AnimatedSection>
 
         <div className="card-elevated max-w-2xl mx-auto">
@@ -214,7 +214,7 @@ export function ProjectMaturityAssessment() {
                 <span className="text-xs font-bold text-cobalt-600 uppercase tracking-widest">
                   {t(`axes.${questions[step]?.axis}`)}
                 </span>
-                <span className="text-sm text-slate-600">
+                <span className="text-sm text-slate-700">
                   {step + 1} / {questions.length}
                 </span>
               </div>
@@ -250,7 +250,7 @@ export function ProjectMaturityAssessment() {
               {step > 0 && (
                 <button
                   onClick={() => setStep(step - 1)}
-                  className="mt-4 flex items-center gap-1 text-sm text-slate-600 hover:text-cobalt-500 transition-colors"
+                  className="mt-4 flex items-center gap-1 text-sm text-slate-700 hover:text-cobalt-500 transition-colors"
                 >
                   <ChevronLeft className="h-4 w-4" />
                   {t("back")}
@@ -268,7 +268,7 @@ export function ProjectMaturityAssessment() {
 
               <RadarChart scores={scores} />
 
-              <p className="mt-6 text-slate-600 text-sm text-center leading-relaxed">
+              <p className="mt-6 text-slate-700 text-sm text-center leading-relaxed">
                 {t(`results.${resultLevel}.description`)}
               </p>
 
@@ -283,7 +283,7 @@ export function ProjectMaturityAssessment() {
                 </MagneticButton>
                 <button
                   onClick={reset}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 px-6 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 px-6 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 transition-colors"
                 >
                   <RotateCcw className="h-4 w-4" />
                   {t("restart")}

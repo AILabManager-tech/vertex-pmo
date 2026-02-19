@@ -10,7 +10,7 @@ export default function NotFound() {
         <h1 className="mb-2 font-heading text-2xl font-semibold text-charcoal">
           Page introuvable
         </h1>
-        <p className="mb-8 text-slate-600">
+        <p className="mb-8 text-slate-700">
           La page que vous cherchez n&apos;existe pas ou a &eacute;t&eacute;
           d&eacute;plac&eacute;e.
         </p>

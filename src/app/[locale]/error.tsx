@@ -27,7 +27,7 @@ export default function Error({
         <h1 className="mb-2 font-heading text-2xl font-semibold text-charcoal">
           Une erreur est survenue
         </h1>
-        <p className="mb-6 text-slate-600">
+        <p className="mb-6 text-slate-700">
           Nous nous excusons pour ce d&eacute;sagr&eacute;ment. Veuillez
           r&eacute;essayer.
         </p>

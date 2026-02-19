@@ -34,9 +34,9 @@ export function TextReveal({
 
   return (
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    <Tag ref={ref as any} className={className}>
+    <Tag ref={ref as any} className={className} aria-label={children}>
       {words.map((word, i) => (
-        <span key={i} className="inline-block overflow-hidden">
+        <span key={i} className="inline-block overflow-hidden" aria-hidden="true">
           <span
             className="inline-block"
             style={{

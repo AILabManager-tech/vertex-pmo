@@ -29,7 +29,7 @@ export function MethodologyTimeline() {
         </AnimatedSection>
         <LineReveal className="mx-auto mb-6 w-24" delay={0.3} />
         <AnimatedSection delay={0.2}>
-          <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
+          <p className="text-center text-slate-700 mb-12 max-w-2xl mx-auto">
             {t("subtitle")}
           </p>
         </AnimatedSection>
@@ -60,7 +60,7 @@ export function MethodologyTimeline() {
                         <h3 className="text-lg font-heading font-bold text-charcoal mb-2">
                           {t(`${phase.key}.title`)}
                         </h3>
-                        <p className="text-slate-600 text-sm leading-relaxed">
+                        <p className="text-slate-700 text-sm leading-relaxed">
                           {t(`${phase.key}.description`)}
                         </p>
                         <p className="mt-3 text-xs font-medium text-orange-700">
