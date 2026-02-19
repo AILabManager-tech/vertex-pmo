@@ -29,7 +29,7 @@ export function GanttHero() {
 
   return (
     <div className="relative w-full max-w-lg" aria-hidden="true">
-      <svg viewBox="0 0 400 240" className="w-full h-auto" role="img">
+      <svg viewBox="0 0 400 240" className="w-full h-auto" role="presentation" aria-hidden="true">
         {/* Grid lines */}
         {[0, 1, 2, 3, 4].map((i) => (
           <line
